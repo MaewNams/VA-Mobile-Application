@@ -1,0 +1,30 @@
+/* Empty. Add your own CSS if you like */
+[nav-bar-transition="android"] [nav-bar="active"] .bar, [nav-bar-transition="android"] [nav-bar="entering"] .bar {
+    background-color: #1abc9c!important;
+}
+
+.bar.bar-stable .title {
+    color: white;
+}
+.bar-stable .button.button-clear {
+    color: white!important;
+    background: none;
+    box-shadow: none;
+    font-size: 17px;
+}
+.bar.large-header {
+$bar-height: 70px;
+@extend .bar;
+}
+
+
+.current a{
+  color:white;
+background-color: #44C2A4 !important;
+}
+.current i{
+color:white !important;
+}
+[nav-bar-transition="ios"] [nav-bar="active"] .bar, [nav-bar-transition="ios"] [nav-bar="entering"] .bar {
+        background-color: #1abc9c!important;
+}

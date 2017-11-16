@@ -1,0 +1,96 @@
+<ion-view view-title="Profile">
+  <ion-content style="background-color:#DDE5E3">
+    <div class="item item-divider">
+  <i class="icon ion-gear-b"></i>    Account setting
+    </div>
+    <div class="card">
+      <label class="item item-input">
+    <span class="input-label">Password : </span>
+    <input type="text" ng-model="data.changepassword" >
+  </label>
+      <label class="item item-input">
+    <span class="input-label">Re-password : </span>
+    <input type="text" ng-model="data.repassword">
+  </label>
+    <div class="button-bar">
+  <a class="button button-positive"  ng-click="changePassword()">Edit</a>
+  <a class="button button-assertive" ng-click="clearPassword()">Cancel</a>
+    </div>
+</div>
+    <div class="item item-divider">
+    <i class="icon ion-android-person"></i>    Personal informtaion
+    </div>
+    <div class="card">
+      <label class="item item-input">
+        <span class="input-label">Email address : </span>
+        <input type="text" ng-model="Profile.email">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Name : </span>
+        <input type="text" ng-model="Profile.name">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Surname : </span>
+        <input type="text" ng-model="Profile.surname">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Address : </span>
+        <input type="text" ng-model="Profile.address">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Phone number : </span>
+        <input type="text" ng-model="Profile.phonenumber">
+      </label>
+
+      <div class="button-bar">
+  <a class="button button-positive"  ng-click="changeInfo()">Edit</a>
+  <a class="button button-assertive" ng-click="reloadRoute()">Cancel</a>
+</div>
+
+    </div>
+  </ion-content>
+
+
+
+
+  <script id="templates/modal.html" type="text/ng-template">
+
+    <ion-modal-view style="background-color:rgba(0,0,0,0.7);">
+      <ion-content class="padding" style="  width: 90% !important;
+      height: 90% !important;
+      top: 15% !important;
+      left: 5% !important;
+      right: 5% !important;
+      bottom: 5% !important;">
+        <div class="bar bar-header bar-light" style="background-color:#1abc9c!important">
+          <h1 class="title" style="color:white">Edit profile</h1>
+            <button class="button button-clear" ng-click="modal.hide()" style="float:right;">   <i class="icon ion-ios-close" style="color: white !important"></i></button>
+        </div>
+        <div class="list">
+          <label class="item item-input" style="padding-top: 0px;">
+               <span class="input-label">Name</span>
+               <input ng-model="Profile.name" type="text">
+             </label>
+          <label class="item item-input">
+               <span class="input-label">Surname</span>
+               <input ng-model="Profile.surname" type="text">
+             </label>
+          <label class="item item-input">
+               <span class="input-label">Address : </span>
+              <input type="text" ng-model="Profile.address">
+             </label>
+          <label class="item item-input">
+               <span class="input-label">Phone number : </span>
+              <input type="text" ng-model="Profile.phonenumber">
+             </label>
+
+          <div style="margin-top:5px">
+            <button class="button  button-full  button-positive" ng-click="editProfile()" style="background-color:#1abc9c!important">Edit</button>
+          </div>
+
+        </div>
+      </ion-content>
+    </ion-modal-view>
+  </script>
+
+</ion-view>

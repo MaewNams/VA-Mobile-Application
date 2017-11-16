@@ -1,0 +1,31 @@
+<ion-view view-title="Timetable">
+  <ion-content>
+<button class="button icon ion-calendar" ng-click="openDatePicker()"> Select date</button>
+<ul class="list">
+    <li class="item">
+{{timetableDate.startTime | date: 'dd-MMMM-yyyy'}}
+</li>
+  <li class="item">
+  <h3 class="title">  Status meaning : </h3>
+  "Free" avalible, you will get fast treatment
+  <br>
+   "Busy" if you didn't make an appointment you may have to wait
+   <br>
+   "Full" please come other time
+    <li>
+</ul>
+          <!-- ngIf: selectedDate1 -->
+
+
+            <div class="row header" style="background-color:stable">
+              <div class="col">  <h4 class="title">Time</h4></div>
+              <div class="col">  <h4 class="title">status</h4></div>
+            </div>
+            <div class="row" ng-repeat="time in selectTimetable track by $index">
+              <div class="col">{{time.startTime |  date : 'h:mma'}} - {{time.endTime |  date :  'h:mma'}}</div>
+              <div class="col">{{time.status}}</div>
+            </div>
+
+
+</ion-content>
+</ion-view>
